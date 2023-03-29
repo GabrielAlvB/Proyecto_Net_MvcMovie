@@ -18,9 +18,14 @@ namespace MvcMovie.Controllers
             //cambiando el index metod (srtind for actionresult) 
         }
 
-        public string Welcome(string name, int ID=1) {
-            return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + ID);
-        
+        public ActionResult Welcome(string name, int numTimes =1) {
+            ViewBag.Message = "Hello " + name;
+            ViewBag.Numtimes = numTimes;
+            //usando ViewBag para pasar ldatos del controlador 
+            // a una vista. 
+            // todo esto es un tipo de M para el modelo, pero no el tipo de bases
+            // de datos
+            return View();
         }
 
         /*
