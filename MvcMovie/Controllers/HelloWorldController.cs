@@ -11,9 +11,11 @@ namespace MvcMovie.Controllers
     public class HelloWorldController : Controller
     {
         // GET: HelloWorld
-        public string Index()
+        public ActionResult Index()
         {
-            return "this is my <b> default <b/> action";
+            return View();
+            //return "this is my <b> default <b/> action";
+            //cambiando el index metod (srtind for actionresult) 
         }
 
         public string Welcome(string name, int ID=1) {
