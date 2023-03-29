@@ -1,10 +1,22 @@
-﻿@{
+﻿<!-- El sigueinte comando establece explicitamente la pagina de diseño
+    esamine el archivo views/shared...
+
+    y el layout define el diseño en comun que usaran las vistas por lo que se puede comentar
+    o dejar este archivo-->
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @{
-    ViewBag.Title = "Index";
- }
+    ViewBag.Title = "Movie List";
+}
+<!--para indicar el tirulo html que se va a mostrar, el codigo anterior estable TITLE
+    propiedad del ViewVag objeto (que se encuentra en la plantilla de vista index.cshtml)
 
-<h2>Index</h2>
+   USA EL VALOR TITLE DEL Views/Shared/_Layout.cshtml
+    (<title>@ViewBag.Title - Movie App</title>)-->
+
+
+<h2>My movie list</h2>
 <p>Hello from our View Template!</p>
